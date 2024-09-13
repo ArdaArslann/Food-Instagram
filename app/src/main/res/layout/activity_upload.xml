@@ -22,27 +22,35 @@
 
         <ImageView
             android:id="@+id/pickImageView"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="0dp"
+            android:maxHeight="400dp"
             android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
             android:clickable="true"
+
             android:onClick="openGallery"
-            app:srcCompat="@android:drawable/ic_menu_gallery" />
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/gallery" />
 
         <TextView
             android:id="@+id/chooseImageTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
             android:layout_alignBottom="@id/pickImageView"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
 
-            android:layout_marginBottom="-12dp"
-            android:fontFamily="sans-serif-smallcaps"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="-24dp"
+            android:fontFamily="sans-serif"
             android:text="CHOOSE IMAGE"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -53,18 +61,19 @@
     </RelativeLayout>
 
     <EditText
-        android:maxLength="50"
         android:id="@+id/foodNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="Food Name"
+        android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-condensed-light"
         android:gravity="center"
+        android:hint="Food Name"
+        android:maxLength="50"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
 
+
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chooseImageLayout" />
 
     <EditText
