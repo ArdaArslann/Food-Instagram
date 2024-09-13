@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:background="@drawable/cardview"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userAndFoodProfileLayout"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/userProfile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/blankuserimage"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/userNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="username"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+
+            app:layout_constraintStart_toEndOf="@+id/userProfile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/foodPlate"
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/plate"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userProfile">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/foodNameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="start"
+            android:text="chicken curry"
+
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/userAndFoodProfileLayout"
+            app:layout_constraintStart_toEndOf="@+id/foodPlate"
+            app:layout_constraintTop_toTopOf="@+id/foodPlate" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/foodImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/blankuserimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userAndFoodProfileLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/likeLayout"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodImage">
+
+        <ImageView
+            android:id="@+id/listPng"
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/list"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/likeLayout">
+
+        </ImageView>
+
+
+        <TextView
+            android:id="@+id/foodDescpTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="start"
+            android:maxLength="250"
+
+            android:text="test"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+
+            app:layout_constraintBottom_toBottomOf="@id/likeLayout"
+            app:layout_constraintEnd_toEndOf="@id/likeLayout"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/listPng"
+            app:layout_constraintTop_toTopOf="@+id/listPng"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/likeBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="13dp"
+            android:clickable="true"
+
+            android:src="@drawable/like"
+            app:layout_constraintBottom_toTopOf="@+id/listPng"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/likeLayout" />
+
+        <TextView
+            android:id="@+id/likeCounter"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="20"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/likeBtn"
+            app:layout_constraintTop_toTopOf="@id/likeLayout" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/divideLayout"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/likeLayout"
+        app:layout_constraintStart_toStartOf="@id/likeLayout"
+        app:layout_constraintTop_toBottomOf="@id/likeLayout"
+        >
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/timeStamp"
+        android:text="23:04"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/likeLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="15dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

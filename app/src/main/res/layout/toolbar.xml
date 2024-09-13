@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#9668E8"
+    android:id="@+id/toolbar"
+    android:elevation="5dp"
+
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/toolbarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    >
+
+    <TextView
+        android:id="@+id/foodieTxt"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Foodie"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/logOut"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addImage"
+        app:layout_constraintTop_toTopOf="@+id/toolbarLayout"
+        app:srcCompat="@drawable/common_full_open_on_phone"></ImageView>
+
+    <ImageView
+        android:id="@+id/addImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/logOut"
+        app:layout_constraintTop_toTopOf="@+id/toolbarLayout"
+        app:layout_constraintStart_toEndOf="@+id/foodieTxt"
+        app:srcCompat="@android:drawable/ic_menu_add"></ImageView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</Toolbar>
