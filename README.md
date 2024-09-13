@@ -11,7 +11,6 @@ Foodie Android App: Publish your meals!
 • Login with email verification  
 • Login with “remember me” function  
 • Forgot password  
-• Sign Out  
 • Firestore usage  
 • Gallery permissions  
 • Firebase storage usage  
