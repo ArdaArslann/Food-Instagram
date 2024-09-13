@@ -85,7 +85,7 @@
         android:id="@+id/foodImage"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:maxHeight="425dp"
+        android:maxHeight="400dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/blankuserimage"
