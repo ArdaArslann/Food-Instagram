@@ -2,7 +2,7 @@
 Foodie Android App: Publish your meals!
 
 ## **In-App Images**
-![New Project (2)](https://github.com/user-attachments/assets/25b7d1f6-c898-46f3-a005-8291b401c9b7)  
+![New Project (2) (1)](https://github.com/user-attachments/assets/a6141c3f-f33d-4635-886f-9a290ae413d2)  
 
   
   
